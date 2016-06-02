@@ -5,13 +5,14 @@ import java.util.List;
 import org.apache.solr.client.solrj.SolrServer;
 import org.apache.solr.common.SolrInputDocument;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import diao.taotao.common.util.ExceptionUtil;
 import diao.taotao.common.util.TaotaoResult;
 import diao.taotao.search.mapper.ItemMapper;
 import diao.taotao.search.pojo.Item;
 import diao.taotao.search.service.ItemService;
-
+@Service
 public class ItemServiceImpl implements ItemService {
     @Autowired
     private ItemMapper itemMapper;
