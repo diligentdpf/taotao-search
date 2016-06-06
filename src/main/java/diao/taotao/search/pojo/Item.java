@@ -16,7 +16,6 @@ public class Item {
     public String getId() {
         return id;
     }
-
     /**
      * @param id the id to set
      */
