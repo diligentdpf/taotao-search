@@ -10,7 +10,12 @@
 
 	<!-- 配置SolrServer对象 -->
 	<!-- 单机版 -->
-	<bean class="org.apache.solr.client.solrj.impl.HttpSolrServer">
-		<constructor-arg name="baseURL" value="${SOLR.SERVER.URL}"></constructor-arg>
+	<!-- <bean class="org.apache.solr.client.solrj.impl.HttpSolrServer"> <constructor-arg 
+		name="baseURL" value="${SOLR.SERVER.URL}"></constructor-arg> </bean> -->
+
+	<!-- 集群版 -->
+	<bean id="cloudSolrServer" class="org.apache.solr.client.solrj.impl.CloudSolrServer">
+		<constructor-arg name="zkHost" value="${SOLR.CLOUD.URL}"></constructor-arg>
+		<property name="defaultCollection" value="collection2"></property>
 	</bean>
 </beans>
